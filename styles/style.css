@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --color-primario: #E5E5E5;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #0A3871;
+    --color-hover: #272727;
+    --fuente-inter: "Inter", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header__imagen {
+    padding-top: 40px;
+    padding-left: 40px;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.principal__contenido {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-top: 168px;
+    padding-left: 40px;
+    padding-bottom: 50px;
+    padding-right: 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 50px;
+
+}
+
+.principal__contenido__texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 900px;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.footer__botones {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.principal__contenido__textoEncriptado {
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.principal__contenido__texto__parrafo {
+    color: #495057;
+    font-family: var(--fuente-inter);
+    font-size: 0.75rem;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    font-weight: 400;
+}
+
+.rectangulo {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 32px;
+    background-color: white;
+    min-height: 800px;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+}
+
+.principal__contenido__textoEncriptado__placeholder,
+.textoEncriptado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    overflow-wrap: break-word;
+}
+
+.principal__contenido__textoEncriptado__placeholder__imagen,
+.principal__contenido__textoEncriptado__placeholder__texto,
+.principal__contenido__textoEncriptado__placeholder__subtitulo {
+    display: block;
+    position: static;
+}
+
+.textoEncriptado {
+    text-align: center;
+    width: 100%;
+    font-family: var(--fuente-inter);
+    font-size: 1.5rem;
+    font-weight: 400;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow-y: auto;
+    max-height: calc(100% - 100px);
+    color: var(--color-terciario);
+}
+
+.principal__contenido__textoEncriptado__placeholder__subtitulo {
+    color: black;
+}
+
+.principal__contenido__textoEncriptado__placeholder__texto {
+    color: black;
+}
+
+.principal__contenido__contenedor {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+
+.principal__contenido__textoEncriptado__boton {
+    display: none;
+    color: var(--color-terciario);
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: white;
+    border: 2px solid var(--color-terciario);
+    padding: 10px 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer__botones__boton {
+    width: 328px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 12px 132px;
+    border-radius: 24px;
+    font-family: var(--fuente-inter);
+    background-color: var(--color-terciario);
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    gap: 24px;
+}
+
+.presentacion__botones_boton:hover {
+    background-color: var(--color-hover);
+}
+
+::placeholder {
+    color: #0A3871;
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+}
+
+.principal__contenido__input {
+    border: none;
+    color: #0A3871;
+    font-family: var(--fuente-inter);
+    font-size: 2rem;
+    margin: 0;
+    outline: none;
+    height: 300px;
+    background-color: var(--color-primario);
+    width: 680px;
+}
+
+.footer__autor {
+    color: #0A3871;
+    padding-left: 40px;
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 1150px) {
+    .principal__contenido {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-top: 5rem;
+        padding-bottom: 20px;
+        padding-right: 1.5rem;
+        margin:0%;
+    }
+
+    .principal__contenido__texto,
+    .principal__contenido__textoEncriptado {
+        max-width: 100%;
+        min-height: auto;
+    }
+
+    .header__imagen {
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
+    .principal__contenido__texto__parrafo {}
+
+    .textoEncriptado {}
+
+    .principal__contenido__textoEncriptado__boton,
+    .footer__botones__boton {
+
+        padding: 0.5rem 1rem;
+    }
+
+    .principal__contenido__input {
+
+        width: 100%;
+    }
+
+    ::placeholder {}
+
+    .footer__autor {
+        padding-left: 1rem;
+    }
+}
+
+/* Media Query para pantallas de 375px de ancho (como la que muestras en la imagen) */
+@media (max-width: 700px) {
+    .principal__contenido {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        margin:0%;
+    }
+
+    .principal__contenido__texto__parrafo {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rectangulo {
+        padding: 20px;
+    }
+
+    .textoEncriptado {}
+
+    .principal__contenido__textoEncriptado__boton,
+    .footer__botones__boton {
+        padding: 0.5rem 1rem;
+    }
+
+    .footer__botones {
+        flex-direction: column;
+    }
+
+    .principal__contenido__input {
+        width: 100%;
+    }
+
+    ::placeholder {}
+
+    .footer__autor {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__imagen {
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto encriptador de texto ALURA</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img class="header__imagen" src="assets/Logo.png" alt="Imagen del logo">
+    </header>
+    <main class="principal">
+        <section class="principal__contenido">
+
+            <div class="contenedor">
+                <div class="principal__contenido__texto">
+                    <div class="contenedor__input">
+                        <textarea class="principal__contenido__input" id="textoOriginal"
+                            placeholder="Ingrese un texto"></textarea>
+                        <p class="principal__contenido__texto__parrafo">Solo letras minúsculas y sin acentos</p>
+                    </div>
+
+                    <div class="footer__botones">
+                        <button onclick="encriptarTexto();" class="footer__botones__boton">Encriptar</button>
+                        <button onclick="desencriptarTexto();" class="footer__botones__boton">Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rectangulo">
+
+                <div class="principal__contenido__textoEncriptado__placeholder" id="placeholder">
+                    <img id="muñeco" class="principal__contenido__textoEncriptado__placeholder__imagen"
+                        src="assets/Muñeco.png" alt="Imagen del muñeco">
+                    <h2 class="principal__contenido__textoEncriptado__placeholder__subtitulo">Ningún mensaje fue
+                        encontrado</h2>
+                    <p class="principal__contenido__textoEncriptado__placeholder__texto">Ingresa el texto que
+                        desees encriptar o desencriptar.</p>
+                </div>
+                <output class="textoEncriptado" id="textoEncriptado"></output>
+
+                <button id="copiar" onclick="copiar();"
+                    class="principal__contenido__textoEncriptado__boton">Copiar</button>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__autor">Created By: Juan Pablo Verdondoni</p>
+    </footer>
+    <script src="encriptador.js"></script>
+</body>
+
+</html>
